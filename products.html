@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="style.css">
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+        <title>Wheelz on the South</title>
+    </head>
+<body>
+<!--navbar-->
+    <header>
+        <nav class="navbar navbar-expand-lg fixed-top navbarcolor">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="index.html"><img class="logo" src="media/logo.jpg">Wheelz on the South</a>
+                <button class="navbar-toggler shadow-none border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="sidebar offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                    <div class="offcanvas-header text-white border-bottom">
+                        <a href="index.html" style="text-decoration: none;" class="offcanvas-title" id="offcanvasNavbarLabel"><img class="logo" src="media/logo.jpg">Wheelz on the South</a>
+                        <button type="button" class="btn-close btn-close-white shadow-none p-4" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body d-flex flex-column flex-lg-row p-4 p-lg-0">
+                        <ul class="navbar-nav justify-content-center align-items-center fs-5 flex-grow-1 pe-3">
+                            <li class="nav-item">
+                                <a class="nav-link" href="index.html">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <div class="dropdown">
+                                    <button class="dropbtn"><a href="products.html" style="text-decoration: none;">Products</a></button>
+                                        <div class="dropdown-content">
+                                            <a href="products.html#productswheels">Wheels</a>
+                                            <a href="products.html#productstires">Tires</a>
+                                            <a href="products.html#productsseats">Seats</a>
+                                        </div>
+                                </div>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="promotions.hmtml">Promotions</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="index.html#reviews">Customer's Reviews</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="aboutus.html">About Us</a>
+                            </li>
+                        </ul>
+                        <div class="d-flex flex-column flex-lg-row justify-content-center align-items-center gap-3">
+                            <div class="shopping header-icon">
+                                <i class='bx bx-cart-alt' ></i>
+                                <span class="quantity">0</span>
+                            </div>
+                            <button type="button" class="btn loginbtn" data-bs-toggle="modal" data-bs-target="#staticBackdrop1">
+                                <i class='bx bx-log-in' id="loginicon"></i>&nbspLog In
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <modal>
+        <div class="modal fade" id="staticBackdrop1" tabindex="-1" aria-labelledby="exampleModalLabel1" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content wrapper" id="body1">
+                    <div class="modal-body">
+                        <form class="formbg needs-validation" novalidate>
+                            <h1>Log In</h1>
+                            <div class="input-box">
+                                <input type="text email" placeholder="Username/Email Address" required>
+                                <i class='bx bxs-user'></i>
+                                <div class="valid-feedback">
+                                    Looks good!
+                                </div>
+                                <div class="invalid-feedback">
+                                    Please enter your Username or Email Address.
+                                </div>
+                            </div>
+                            <div class="input-box">
+                                <input type="password" placeholder="Password" required>
+                                <i class='bx bxs-lock-alt' ></i>
+                                <div class="valid-feedback">
+                                    Looks good!
+                                </div>
+                                <div class="invalid-feedback">
+                                    Please enter your password.
+                                </div>
+                            </div>
+                    
+                            <div class="remember-forgot">
+                                <label><input type="checkbox"> Remember me</label>
+                                <p>Forgot password?<a href="#"> Click here!</a></p>
+                            </div>
+                    
+                            <button type="submit" class="loginbtn">Log In</button>
+                    
+                            <div class="register-link">
+                                <p>By logging in, you agree to the <b><a href="terms.html">Terms and Conditions</a></b> and<b><a href="privacy.html"> Privacy Policy</a></b>.</p>
+                                <p>Don't have an account?<button type="button" class="btn text-white" data-bs-toggle="modal" data-bs-target="#staticBackdrop1Signup">
+                                    Register here!
+                                </button></a></p>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="staticBackdrop1Signup" tabindex="-1" aria-labelledby="exampleModalLabel1" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content wrapper" id="body1">
+                    <div class="modal-body">
+                        <form class="formbg needs-validation" novalidate>
+                            <h1>Sign Up</h1>
+                            <div class="input-box">
+                                <input type="text" placeholder="Full Name" required>
+                                <i class='bx bxs-user'></i>
+                                <div class="valid-feedback">
+                                    Looks good!
+                                </div>
+                                <div class="invalid-feedback">
+                                    Please enter your Full Name.
+                                </div>
+                            </div>
+                            <div class="input-box">
+                                <input type="email" placeholder="Email Address" required>
+                                <i class='bx bx-envelope'></i>
+                                <div class="valid-feedback">
+                                    Looks good!
+                                </div>
+                                <div class="invalid-feedback">
+                                    Please enter your Email Address.
+                                </div>
+                            </div>
+                            <div class="input-box">
+                                <input type="password" placeholder="Password" required>
+                                <i class='bx bxs-lock-alt' ></i>
+                                <div class="valid-feedback">
+                                    Looks good!
+                                </div>
+                                <div class="invalid-feedback">
+                                    Please enter your password.
+                                </div>
+                            </div>
+                            <div class="input-box">
+                                <input type="password" placeholder="Confirm Password" required>
+                                <i class='bx bxs-lock-alt' ></i>
+                                <div class="valid-feedback">
+                                    Looks good!
+                                </div>
+                                <div class="invalid-feedback">
+                                    Please confirm your password.
+                                </div>
+                            </div>
+                            <div class="input-box">
+                                <input type="tel" placeholder="Phone Number" required>
+                                <i class='bx bx-phone' ></i>
+                                <div class="valid-feedback">
+                                    Looks good!
+                                </div>
+                                <div class="invalid-feedback">
+                                    Please enter your Phone Number.
+                                </div>
+                            </div>
+                    
+                            <button type="submit" class="loginbtn">Signup</button>
+                    
+                            <div class="register-link">
+                                <p>By signing up, you agree to the <b><a href="terms.html">Terms and Conditions</a></b> and<b><a href="privacy.html"> Privacy Policy</a></b>.</p>
+                                <p>Already have an account?<button type="button" class="btn text-white" data-bs-toggle="modal" data-bs-target="#staticBackdrop1">
+                                    Log in here!
+                                </button></a></p>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </modal>
+<!--navbar-->
+<br>
+<br id="productswheels">
+<br>
+<!--main page-->
+    <section class="backgroundmain">
+        <div class="container">
+            <section>          
+                <div class="productswheels-heading">
+                    <h1>MAG WHEELS</h1>
+                </div>   
+            </section>
+<!--magwheels-->
+<br>
+<!--Stealth Grip-->
+<div class="container">
+    <div class="row">
+        <div class="col-lg-6">
+            <div class="card">
+                <img src="media/mags1.jpg" class="card-img-top" alt="mags1">
+                <div class="card-body">
+                  <h3 style="text-align: center;">Stealth Grip</h3>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg">
+            <h1>Stealth Grip Mags Tires: Unleash Your Drive in Style and Silence</h1>
+            <div class="h4 product-price">
+                PHP&nbsp;7,500.00
+            </div><br>
+            <p><i>Discover the perfect fusion of aesthetics and functionality with our Stealth Grip mags tires. Engineered to elevate your driving experience, these tires redefine performance on the road while maintaining an elegant and understated design.</i></p>
+            <div class="specs">
+                <h5><b>SIZE: </b>17x8.5</h5>
+                <br>
+                <h5><b>HOLES: </b>4 Holes</h5>
+                <br>
+                <h5><b>PCD: </b>139.7</h5>
+                <br>
+                <h5><b>OFFSET: </b>-10</h5>
+                <br>
+                <h5><i>Note: Items are sold per set (4pcs)</i></h5>
+                <br>
+                <p>Quantity:</p>
+                <input type="number" min="0" placeholder="Input Quantity" required>
+                <br>
+                <br>
+                <button type="button" class="btn btn-danger">Add to Cart</button>
+            </div><br>
+            <div>
+                <p style="white-space:pre-wrap;">Tags: Toyota Hilux | Ford Ranger | Toyota Fortuner | Mitsubishi Montero | Chevrolet Colorado | Chevrolet Trailblazer | Mitsubishi Strada | Nissan Patrol | Isuzu MUX</p>
+                <br>
+                <h5>Key Features:<br><br></h5>
+                <p><b>Silent Precision:</b> The Stealth Grip tires are crafted with advanced noise reduction technology, ensuring a whisper-quiet ride. Enjoy the serenity of the road without compromising on performance.</p>
+                <p><b>Exceptional Traction:</b> Whether navigating city streets or tackling challenging terrains, these tires provide unparalleled traction. The advanced grip technology ensures a secure connection between your vehicle and the road, enhancing stability and control.</p>
+                <h6>Upgrade your ride with Stealth Grip mags tires and embrace a new level of driving excellence. Elevate your style, enhance your performance, and enjoy the journey in silence with these exceptional tires.</h6>
+            </div>
+        </div>
+    </div>
+</div>
+<!--Stealth Grip-->
+<br>
+<hr>
+<br>
+<!--Turbo Tread-->
+<div class="container">
+    <div class="row">
+        <div class="col-lg-6">
+            <div class="card">
+                <img src="media/mags2.jpg" class="card-img-top" alt="mags2">
+                <div class="card-body">
+                  <h3 style="text-align: center;">Turbo Tread</h3>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg">
+            <h1>Turbo Tread Mags Tires: Unleash the Power of Precision and Acceleration</h1>
+            <div class="h4 product-price">
+                PHP&nbsp;8,500.00
+            </div><br>
+            <p><i>Embark on a journey where every turn is an opportunity to experience the thrill of speed and the precision of control with Turbo Tread mags tires. Engineered for enthusiasts who crave high-performance and style, these tires are a perfect blend of cutting-edge technology and dynamic design.</i></p>
+            <div class="specs">
+                <h5><b>SIZE: </b>17x8.5</h5>
+                <br>
+                <h5><b>HOLES: </b>4 Holes</h5>
+                <br>
+                <h5><b>PCD: </b>114.3</h5>
+                <br>
+                <h5><b>OFFSET: </b>-11</h5>
+                <br>
+                <h5><i>Note: Items are sold per set (4pcs)</i></h5>
+                <br>
+                <p>Quantity:</p>
+                <input type="number" min="0" placeholder="Input Quantity" required>
+                <br>
+                <br>
+                <button type="button" class="btn btn-danger">Add to Cart</button>
+            </div><br>
+            <div>
+                <p style="white-space:pre-wrap;">Tags: Toyota Hilux | Ford Ranger | Toyota Fortuner | Mitsubishi Montero | Chevrolet Colorado | Chevrolet Trailblazer | Mitsubishi Strada | Nissan Patrol | Isuzu MUX</p>
+                <br>
+                <h5>Key Features:<br><br></h5>
+                <p><b>Rapid Acceleration:</b> Turbo Tread tires are designed for those who demand quick acceleration. Experience the exhilaration of a faster start and seamless speed transitions as these tires propel you forward with unmatched agility.</p>
+                <p><b>Aggressive Traction:</b> Conquer the road with confidence, thanks to the aggressive traction provided by Turbo Tread. Whether it's a smooth highway or a winding backroad, these tires grip the surface with tenacity, enhancing stability and performance.</p>
+                <h6>Elevate your driving experience to new heights with Turbo Tread mags tires. Unleash the power of precision and acceleration, and let your journey be defined by speed, style, and unmatched performance on the road</h6>
+            </div>
+        </div>
+    </div>
+</div>
+<!--Turbo Tread-->
+<br>
+<hr>
+<br>
+<!--Velocity Grip-->
+<div class="container">
+    <div class="row">
+        <div class="col-lg-6">
+            <div class="card">
+                <img src="media/mags3.jpg" class="card-img-top" alt="mags3">
+                <div class="card-body">
+                  <h3 style="text-align: center;">Velocity Grip</h3>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg">
+            <h1>Velocity Grip Mags Tires: Redefine Your Drive with Precision and Performance</h1>
+            <div class="h4 product-price">
+                PHP&nbsp;9,500.00
+            </div><br>
+            <p><i>Prepare to experience the road like never before with Velocity Grip mags tires. These tires are meticulously crafted to elevate your driving adventure, offering a perfect synergy of cutting-edge technology and sleek design for those who crave both speed and control.</i></p>
+            <div class="specs">
+                <h5><b>SIZE: </b>17x8.5</h5>
+                <br>
+                <h5><b>HOLES: </b>4 Holes</h5>
+                <br>
+                <h5><b>PCD: </b> 115.3</h5>
+                <br>
+                <h5><b>OFFSET: </b>-9</h5>
+                <br>
+                <h5><i>Note: Items are sold per set (4pcs)</i></h5>
+                <br>
+                <p>Quantity:</p>
+                <input type="number" min="0" placeholder="Input Quantity" required>
+                <br>
+                <br>
+                <button type="button" class="btn btn-danger">Add to Cart</button>
+            </div><br>
+            <div>
+                <p style="white-space:pre-wrap;">Tags: Toyota Hilux | Ford Ranger | Toyota Fortuner | Mitsubishi Montero | Chevrolet Colorado | Chevrolet Trailblazer | Mitsubishi Strada | Nissan Patrol | Isuzu MUX</p>
+                <br>
+                <h5>Key Features:<br><br></h5>
+                <p><b>Dynamic Precision:</b> Velocity Grip tires redefine precision on the road. Feel the responsiveness as you take command of every turn, ensuring a driving experience that's not just thrilling but also under your complete control.</p>
+                <p><b>Durability Beyond Expectations:</b> Built with durability in mind, Velocity Grip tires are constructed from high-quality materials to withstand the challenges of the road. Enjoy the confidence that comes with knowing your tires are as robust as they are stylish.</p>
+                <h6>levate your driving experience to new heights with Velocity Grip mags tires. Redefine your drive with a perfect balance of precision, performance, and style. Unleash the full potential of your vehicle on the open road, guided by the exceptional capabilities of Velocity Grip.</h6>
+            </div>
+        </div>
+    </div>
+</div>
+<!--Velocity Grip-->
+<br id="productstires">
+<hr>
+</div>
+<!--magwheels-->
+
+<!--tires-->
+<div class="backgroundmain">
+    <section>          
+        <div class="productswheels-heading">
+            <h1>TIRES</h1>
+        </div>   
+    </section>
+<br>
+<!--AMP Terrain Attack A/T G-->
+<div class="container">
+    <div class="row">
+        <div class="col-lg-6">
+            <div class="card">
+                <img src="media/tire1.png" class="card-img-top" alt="tire1">
+                <div class="card-body">
+                  <h3 style="text-align: center;">AMP Terrain Attack A/T G</h3>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg">
+            <h1>AMP Terrain Attack A/T G: Conquer Every Terrain with Confidence</h1>
+            <div class="h4 product-price">
+                PHP&nbsp;3,500.00
+            </div><br>
+            <p><i>Unleash the power of versatility with the AMP Terrain Attack A/T G, the tire engineered to conquer a myriad of terrains without compromising on performance. Whether you're navigating city streets, tackling off-road trails, or cruising the highway, these tires are designed to provide the ultimate driving experience.</i></p>
+            <div class="specs">
+                
+                <h5><i>Note: Items are sold per piece (1 pc)</i></h5>
+                <br>
+                <div class="input-box">
+                    <p>Size:</p>
+                    <select class="form-select" id="quantity" name="quantity" required>
+                        <option selected disabled value="">Select Size</option>
+                        <option value="285/50/20">285/50/20</option>
+                        <option value="275/55/20">275/55/20</option>
+                        <option value="265/50/20">265/50/20</option>
+                        <option value="265/70/17">265/70/17</option>
+                    </select>
+                </div>
+                <br>
+                <p>Quantity:</p>
+                <input type="number" min="0" placeholder="Input Quantity" required>
+                <br>
+                <br>
+                <button type="button" class="btn btn-danger">Add to Cart</button>
+            </div><br>
+            <div>
+                <p style="white-space:pre-wrap;">Tags: Toyota Hilux | Ford Ranger | Toyota Fortuner | Mitsubishi Montero | Chevrolet Colorado | Chevrolet Trailblazer | Mitsubishi Strada | Nissan Patrol | Isuzu MUX</p>
+                <br>
+                <h5>Key Features:<br><br></h5>
+                <p><b>Aggressive All-Terrain Traction:</b> The Terrain Attack A/T G is equipped with an aggressive tread pattern that bites into various surfaces, providing exceptional traction on mud, gravel, sand, and more. Conquer the off-road with confidence, knowing that your tires are up to the challenge.</p>
+                <p><b>Durability Meets Performance:</b> Engineered for durability, these tires are built to withstand the rigors of off-road adventures while maintaining excellent on-road performance. The robust construction ensures a longer lifespan, making them a reliable choice for the adventurous at heart.</p>
+                <h6>Upgrade your ride with AMP Terrain Attack A/T G and embrace a tire that excels in both style and substance. Conquer the road, explore new horizons, and experience the freedom to go wherever your adventure takes you.</h6>
+            </div>
+        </div>
+    </div>
+</div>
+<!--AMP Terrain Attack A/T G-->
+<br>
+<hr>
+<br>
+<!--AMP Terrain Attack A/T P-->
+<div class="container">
+    <div class="row">
+        <div class="col-lg-6">
+            <div class="card">
+                <img src="media/tire2.png" class="card-img-top" alt="tire2">
+                <div class="card-body">
+                  <h3 style="text-align: center;">AMP Terrain Pro A/T P</h3>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg">
+            <h1>AMP Terrain Pro A/T P: Your Partner on the Path Less Traveled</h1>
+            <div class="h4 product-price">
+                PHP&nbsp;4,500.00
+            </div><br>
+            <p><i>Introducing the AMP Terrain Pro A/T P where rugged meets refined, and off-road capability seamlessly blends with on-road performance. Engineered for the modern adventurer, these tires are designed to navigate diverse terrains with confidence while delivering a smooth and comfortable ride on the pavement.</i></p>
+            <div class="specs">
+                
+                <h5><i>Note: Items are sold per piece (1 pc)</i></h5>
+                <br>
+                <div class="input-box">
+                    <p>Size:</p>
+                    <select class="form-select" id="quantity" name="quantity" required>
+                        <option selected disabled value="">Select Size</option>
+                        <option value="285/50/20">285/50/20</option>
+                        <option value="275/55/20">275/55/20</option>
+                        <option value="265/50/20">265/50/20</option>
+                        <option value="265/70/17">265/70/17</option>
+                    </select>
+                </div>
+                <br>
+                <p>Quantity:</p>
+                <input type="number" min="0" placeholder="Input Quantity" required>
+                <br>
+                <br>
+                <button type="button" class="btn btn-danger">Add to Cart</button>
+            </div><br>
+            <div>
+                <p style="white-space:pre-wrap;">Tags: Toyota Hilux | Ford Ranger | Toyota Fortuner | Mitsubishi Montero | Chevrolet Colorado | Chevrolet Trailblazer | Mitsubishi Strada | Nissan Patrol | Isuzu MUX</p>
+                <br>
+                <h5>Key Features:<br><br></h5>
+                <p><b>Versatile All-Terrain Mastery:</b> The Terrain Pro A/T P is crafted to conquer a spectrum of terrains, from rocky trails to city streets. Its all-terrain capability ensures that your journey is never restricted, allowing you to explore the outdoors with the confidence that your tires can handle the challenge.</p>
+                <p><b>Comfortable Highway Ride:</b> Experience the best of both worlds with a tire that excels on the highway. The Terrain Pro A/T P provides a smooth and comfortable ride, with reduced road noise and vibrations, ensuring that your daily commute is as enjoyable as your off-road adventures.</p>
+                <h6>Embark on your next adventure with confidence, knowing that AMP Terrain Pro A/T P tires are your reliable companion for all journeys, from the urban jungle to the untamed wilderness. Elevate your driving experience, and let the path less traveled become your preferred route.</h6>
+            </div>
+        </div>
+    </div>
+</div>
+<!--AMP Terrain Attack A/T P-->
+<br>
+<hr>
+<br>
+<!--AMP Terrain Attack A/T A-->
+<div class="container">
+    <div class="row">
+        <div class="col-lg-6">
+            <div class="card">
+                <img src="media/tire3.png" class="card-img-top" alt="tire3">
+                <div class="card-body">
+                  <h3 style="text-align: center;">AMP - TERRAIN ATTACK M/T A</h3>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg">
+            <h1>AMP Terrain Attack M/T A: Dominate the Off-Road Landscape</h1>
+            <div class="h4 product-price">
+                PHP&nbsp;5,500.00
+            </div><br>
+            <p><i>Prepare for a tire that thrives where others falter – the AMP Terrain Attack M/T A. Engineered for the off-road enthusiast who demands superior traction and durability, these tires are the epitome of rugged performance, conquering the most challenging terrains with authority.</i></p>
+            <div class="specs">
+                
+                <h5><i>Note: Items are sold per piece (1 pc)</i></h5>
+                <br>
+                <div class="input-box">
+                    <p>Size:</p>
+                    <select class="form-select" id="quantity" name="quantity" required>
+                        <option selected disabled value="">Select Size</option>
+                        <option value="285/50/20">285/50/20</option>
+                        <option value="275/55/20">275/55/20</option>
+                        <option value="265/50/20">265/50/20</option>
+                        <option value="265/70/17">265/70/17</option>
+                    </select>
+                </div>
+                <br>
+                <p>Quantity:</p>
+                <input type="number" min="0" placeholder="Input Quantity" required>
+                <br>
+                <br>
+                <button type="button" class="btn btn-danger">Add to Cart</button>
+            </div><br>
+            <div>
+                <p style="white-space:pre-wrap;">Tags: Toyota Hilux | Ford Ranger | Toyota Fortuner | Mitsubishi Montero | Chevrolet Colorado | Chevrolet Trailblazer | Mitsubishi Strada | Nissan Patrol | Isuzu MUX</p>
+                <br>
+                <h5>Key Features:<br><br></h5>
+                <p><b>Mud-Terrain Dominance: </b> Unleash the beast within with the Terrain Attack M/T A, designed to power through mud, rocks, and rough terrains. The aggressive tread pattern digs deep, providing unparalleled traction and ensuring you stay in control when the going gets tough.</p>
+                <p><b>Optimized Tread Design:</b> The Terrain Attack M/T A's optimized tread design not only enhances off-road performance but also maintains stability and control on the pavement. Transition seamlessly from off-road trails to city streets without compromising on performance.</p>
+                <h6>Dominate the off-road landscape with confidence, knowing that AMP Terrain Attack M/T A tires are purpose-built to tackle the toughest challenges. Elevate your off-road experience and let the Terrain Attack M/T A redefine your expectations of what's possible on the trail.</h6>
+            </div>
+        </div>
+    </div>
+</div>
+<!--AMP Terrain Attack A/T A-->
+<br id="productsseats">
+<hr>
+</div>
+<!--tires-->
+<!--carseats-->
+<div class="backgroundmain">
+    <section>          
+        <div class="productswheels-heading">
+            <h1>CAR SEATS</h1>
+        </div>   
+    </section>
+<br>
+<!--CAP DRIVEN® Voris Series Full Set Seat Covers-->
+<div class="container">
+    <div class="row">
+        <div class="col-lg-6">
+            <div class="card">
+                <img src="media/seat1.png" class="card-img-top" alt="seat1">
+                <div class="card-body">
+                  <h3 style="text-align: center;">CAP DRIVEN® Voris Series Full Set Seat Covers</h3>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg">
+            <h1>CAP DRIVEN® Voris Series Full Set Seat Covers: Elevate Your Drive in Comfort and Style</h1>
+            <div class="h4 product-price">
+                PHP&nbsp;23,500.00
+            </div><br>
+            <p><i>Introducing the CAP DRIVEN® Voris Series Full Set Seat Covers – where innovation meets craftsmanship to redefine your driving experience. Designed with meticulous attention to detail, these seat covers seamlessly blend unparalleled comfort with a sleek aesthetic, transforming your vehicle's interior into a haven of sophistication.</i></p>
+            <div class="specs">
+                <h5><b>DIMENSION: </b>21" W X 22" D X 38" H Overall Dimensions</h5>
+                <br>
+                <h5><b>DEPTH: </b>12" Seat Width X 10.5" Backrest Width X 34" Backrest height X 19.5" Seat Depth</h5>
+                <br>
+                <h5><b>MATERIALS: </b>Made of High Quality Steel & Vinyl Leather</h5>
+                <br>
+                <h5><i>Note: Items are sold per set (4pcs)</i></h5>
+                <br>
+                <p>Quantity:</p>
+                <input type="number" min="0" placeholder="Input Quantity" required>
+                <br>
+                <br>
+                <button type="button" class="btn btn-danger">Add to Cart</button>
+            </div><br>
+            <div>
+                <p style="white-space:pre-wrap;">Tags: Toyota Hilux | Ford Ranger | Toyota Fortuner | Mitsubishi Montero | Chevrolet Colorado | Chevrolet Trailblazer | Mitsubishi Strada | Nissan Patrol | Isuzu MUX</p>
+                <br>
+                <h5>Key Features:<br><br></h5>
+                <p><b>Luxurious Comfort:</b> Experience a new level of driving comfort with the Voris Series Seat Covers. Crafted from premium materials, these seat covers provide a plush and luxurious feel, making every journey a relaxing and enjoyable experience.</p>
+                <p><b>Custom-Fit Design:</b> Tailored to perfection, the Voris Series seat covers offer a custom-fit for your vehicle's seats. The precision engineering ensures a snug and seamless look, giving your interior a refined and polished appearance.</p>
+                <h6>Upgrade your driving experience with CAP DRIVEN® Voris Series Full Set Seat Covers – where comfort, style, and durability come together to transform every journey into a luxurious escape. Elevate your drive and make a statement with seat covers that redefine automotive sophistication.</h6>
+            </div>
+        </div>
+    </div>
+</div>
+<!--CAP DRIVEN® Voris Series Full Set Seat Covers-->
+<br>
+<hr>
+<br>
+<!--CAP DRIVEN® Voris Series Front Row Set Seat Covers-->
+<div class="container">
+    <div class="row">
+        <div class="col-lg-6">
+            <div class="card">
+                <img src="media/seat2.png" class="card-img-top" alt="seat2">
+                <div class="card-body">
+                  <h3 style="text-align: center;">CAP DRIVEN® Voris Series Front Row Set Seat Covers</h3>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg">
+            <h1>CAP DRIVEN® Voris Series Front Row Set Seat Covers: Unrivaled Elegance for Your Drive</h1>
+            <div class="h4 product-price">
+                PHP&nbsp;13,500.00
+            </div><br>
+            <p><i>Elevate the interior of your vehicle with the CAP DRIVEN® Voris Series Front Row Set Seat Covers, a harmonious blend of sophistication and functionality. Precision-engineered to seamlessly fit your front-row seats, these seat covers redefine comfort and style, ensuring every drive is an experience in luxury.</i></p>
+            <div class="specs">
+                <h5><b>DIMENSION: </b>22" W X 23" D X 39" H Overall Dimensions</h5>
+                <br>
+                <h5><b>DEPTH: </b>13" Seat Width X 11.5" Backrest Width X 35" Backrest height X 20.5" Seat Depth</h5>
+                <br>
+                <h5><b>MATERIALS: </b>Made of High Quality Steel & Vinyl Leather</h5>
+                <br>
+                <h5><i>Note: Items are sold per set (2pcs)</i></h5>
+                <br>
+                <p>Quantity:</p>
+                <input type="number" min="0" placeholder="Input Quantity" required>
+                <br>
+                <br>
+                <button type="button" class="btn btn-danger">Add to Cart</button>
+            </div><br>
+            <div>
+                <p style="white-space:pre-wrap;">Tags: Toyota Hilux | Ford Ranger | Toyota Fortuner | Mitsubishi Montero | Chevrolet Colorado | Chevrolet Trailblazer | Mitsubishi Strada | Nissan Patrol | Isuzu MUX</p>
+                <br>
+                <h5>Key Features:<br><br></h5>
+                <p><b>Tailored Precision Fit:</b> The Voris Series Front Row Set Seat Covers are meticulously crafted for a tailored precision fit. Engineered to seamlessly hug the contours of your front seats, they create a sleek and polished look that transforms your vehicle's interior.</p>
+                <p><b>Supreme Comfort:</b> Indulge in a driving experience like no other with the supreme comfort offered by Voris Series seat covers. The high-quality materials provide a soft and luxurious feel, making each journey a pleasure for both driver and passenger.</p>
+                <h6>Make a statement with CAP DRIVEN® Voris Series Front Row Set Seat Covers – where elegance and functionality converge to redefine the ambiance of your vehicle's front seats. Upgrade your drive with a touch of luxury and showcase your commitment to unmatched style.</h6>
+            </div>
+        </div>
+    </div>
+</div>
+<!--CAP DRIVEN® Voris Series Full Set Seat Covers-->
+<br>
+<hr>
+<br>
+<!--CAP DRIVEN® Touring Series Full Set Seat Covers-->
+<div class="container">
+    <div class="row">
+        <div class="col-lg-6">
+            <div class="card">
+                <img src="media/seat3.png" class="card-img-top" alt="seat3">
+                <div class="card-body">
+                  <h3 style="text-align: center;">CAP DRIVEN® Touring Series Full Set Seat Covers</h3>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg">
+            <h1>CAP DRIVEN® Touring Series Full Set Seat Covers: Elevate Every Journey in Comfort and Style</h1>
+            <div class="h4 product-price">
+                PHP&nbsp;20,500.00
+            </div><br>
+            <p><i>Introducing the CAP DRIVEN® Touring Series Full Set Seat Covers, where practicality meets luxury to transform your vehicle's interior. Crafted with meticulous attention to detail, these seat covers offer a perfect balance of elegance and functionality, enhancing your driving experience with unparalleled comfort and style.</i></p>
+            <div class="specs">
+                <h5><b>DIMENSION: </b>20" W X 21" D X 37" H Overall Dimensions</h5>
+                <br>
+                <h5><b>DEPTH: </b>12" Seat Width X 12.5" Backrest Width X 34" Backrest height X 18.5" Seat Depth</h5>
+                <br>
+                <h5><b>MATERIALS: </b>Made of High Quality Steel & Vinyl Leather</h5>
+                <br>
+                <h5><i>Note: Items are sold per set (4pcs)</i></h5>
+                <br>
+                <p>Quantity:</p>
+                <input type="number" min="0" placeholder="Input Quantity" required>
+                <br>
+                <br>
+                <button type="button" class="btn btn-danger">Add to Cart</button>
+            </div><br>
+            <div>
+                <p style="white-space:pre-wrap;">Tags: Toyota Hilux | Ford Ranger | Toyota Fortuner | Mitsubishi Montero | Chevrolet Colorado | Chevrolet Trailblazer | Mitsubishi Strada | Nissan Patrol | Isuzu MUX</p>
+                <br>
+                <h5>Key Features:<br><br></h5>
+                <p><b>All-Season Versatility:</b> Designed for versatility, these seat covers are suitable for all seasons. Experience comfort and style year-round, whether facing the heat of summer or the chill of winter, thanks to the Touring Series' thoughtful design.</p>
+                <p><b>Stylish Design Elements: </b> Elevate your interior with stylish design elements that define the Touring Series. From subtle stitching patterns to tasteful embellishments, these seat covers add a touch of sophistication, ensuring your vehicle stands out on the road.</p>
+                <h6>Make a statement with CAP DRIVEN® Voris Series Front Row Set Seat Covers – where elegance and functionality converge to redefine the ambiance of your vehicle's front seats. Upgrade your drive with a touch of luxury and showcase your commitment to unmatched style.</h6>
+            </div>
+        </div>
+    </div>
+</div>
+<!--CAP DRIVEN® Touring Series Full Set Seat Covers-->
+<br>
+<hr>
+<br>
+</div>
+<!--carseats-->
+        </div>
+    </section>
+<!--main page-->
+<!--footer-->
+<div>
+    <footer>
+        <div class="footerContainer">
+            <div class="socialIcons">
+                <a href="https://www.facebook.com/WheelzOnTheSouth" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+                <a href="https://www.instagram.com/wheelzonthesouth.co/?fbclid=IwAR1CuKpRbYJqfAv5c8lIgNFukOLHj0hLH1kaJYH3xnN1Pt4dIx16RV47wzo" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.tiktok.com/@wheelzonthesouthofficial?fbclid=IwAR30Y_QVFWXXWRRxDUZhMt6VUlmmuebAVDBHCniTVLUFbWASy-q1CATi9O8" target="_blank"><i class="fa-brands fa-tiktok"></i></a>
+                <a href="https://www.youtube.com/@wheelzonthesouth1690" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+            </div>
+            <div class="footerNav">
+                <ul>
+                    <li><a href="contactus.html">Contact Us</a></li>
+                    <li><a href="terms.html">Terms & Conditions</a></li>
+                    <li><a href="aboutus.html">About Us</a></li>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                </ul>
+            </div>
+            <p class="copyrights"><i class='bx bxs-map' ></i>National Hwy, 1770 Muntinlupa, Philippines 1773 Muntinlupa City, Philippines<br><i class='bx bxs-phone' ></i> 09081826915&nbsp;<i class='bx bxs-envelope' ></i>wheelzonthesouth@gmail.com</p>
+        </div>
+        <div class="footerBottom">
+            <p>© 2023 Wheelz on the South; Designed by <span class="designer">Peter C. & Archie K.</span></p>
+        </div>
+    </footer>
+</div>
+<!--footer-->
+</body>
+</html>
