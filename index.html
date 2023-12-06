@@ -103,7 +103,7 @@
                     
                             <div class="register-link">
                                 <p>By logging in, you agree to the <b><a href="terms.html">Terms and Conditions</a></b> and<b><a href="privacy.html"> Privacy Policy</a></b>.</p>
-                                <p>Don't have an account?<button type="button" class="btn text-white" data-bs-toggle="modal" data-bs-target="#staticBackdrop1Signup">
+                                <p>Don't have an account?<button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#staticBackdrop1Signup" style="color: #08E9F1;">
                                     Register here!
                                 </button></a></p>
                             </div>
@@ -159,7 +159,7 @@
                                 </div>
                             </div>
                             <div class="input-box">
-                                <input type="tel" placeholder="Phone Number" required>
+                                <input type="number" placeholder="Phone Number" required>
                                 <i class='bx bx-phone' ></i>
                                 <div class="valid-feedback">
                                     Looks good!
@@ -173,7 +173,7 @@
                     
                             <div class="register-link">
                                 <p>By signing up, you agree to the <b><a href="terms.html">Terms and Conditions</a></b> and<b><a href="privacy.html"> Privacy Policy</a></b>.</p>
-                                <p>Already have an account?<button type="button" class="btn text-white" data-bs-toggle="modal" data-bs-target="#staticBackdrop1">
+                                <p>Already have an account?<button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#staticBackdrop1" style="color: #08E9F1;">
                                     Log in here!
                                 </button></a></p>
                             </div>
@@ -418,6 +418,26 @@
         </div>
     </div>
 <!--main page-->
+<script>
+    (() => {
+    'use strict'
+
+    
+    const forms = document.querySelectorAll('.needs-validation')
+
+
+    Array.from(forms).forEach(form => {
+        form.addEventListener('submit', event => {
+        if (!form.checkValidity()) {
+            event.preventDefault()
+            event.stopPropagation()
+        }
+
+        form.classList.add('was-validated')
+        }, false)
+    })
+    })()
+</script>
 <!--footer-->
 <div>
     <footer>

@@ -173,7 +173,7 @@
                     
                             <div class="register-link">
                                 <p>By signing up, you agree to the <b><a href="terms.html">Terms and Conditions</a></b> and<b><a href="privacy.html"> Privacy Policy</a></b>.</p>
-                                <p>Already have an account?<button type="button" class="btn data-bs-toggle="modal" data-bs-target="#staticBackdrop1" style="color: #08E9F1;">
+                                <p>Already have an account?<button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#staticBackdrop1" style="color: #08E9F1;">
                                     Log in here!
                                 </button></a></p>
                             </div>
@@ -188,109 +188,73 @@
 <br>
 <br>
 <!--main page-->
+<!--contactus-->
 <section class="backgroundmain">
     <div class="container">
-        <div class="faqs-heading">
-            <h1>FREQUENTLY ASKED QUESTIONS</h1>
+        <div class="contactus-heading">
+            <h1>CONTACT US</h1>
         </div>
-    </div>
+    </div><br>
 </section>
 <section class="backgroundmain">
     <div class="container">
-        <div class="faqs-heading">
-            <h2>What are my payment options?</h2>
-        </div>
-        <ul class="paymentmethod">
-            <li><p>PayPal</p></li>
-            <li><p>All major Credit and Debit Cards</p></li>
-                <ul><li><p>No need to create a PayPal account just proceed to “Continue as Guest”</p></li></ul>
-            <li><p>Cash / Credit Card on Delivery with an initial reservation fee of P5,000 or 50% of the purchase price for orders below P5,000.</p></li>
-            <li><p>Fund Transfer through our Bank Partners (BDO, Eastwest Bank and Unionbank)</p></li>
-        </ul>
-    </div>
-    <br>
-    <div class="container">
-        <div class="faqs-heading">
-            <h2>How do I get my purchase?</h2>
-        </div>
-        <ul class="paymentmethod">
-            <li><p>Free delivery for all orders over P10,000. A delivery fee of P500 for orders below P10,000 within Metro Manila. Shipping charges may vary for deliveries outside Metro Manila.</p></li>
-            <li><p>Store pick-up with free installation in our Dubshop Stores (Banawe and Makati branch). Stores are open from Mondays to Saturdays - 9am to 6pm.</p></li>
-        </ul>
-    </div>
-    <br>
-    <div class="container">
-        <div class="faqs-heading">
-            <h2>When do I receive my purchase?</h2>
-        </div>
-        <ul class="paymentmethod">
-            <li><p>Orders are processed and shipped within 24 to 48 hours from your order confirmation date, unless otherwise specified. Deliveries may vary for orders outside Metro Manila.</p></li>
-        </ul>
-    </div>
-    <br>
-    <div class="container">
-        <div class="faqs-heading">
-            <h2>What if I change my mind about my purchase?</h2>
-        </div>
-        <ul class="paymentmethod">
-            <li><p>You may message us directly for concerns regarding change of item. Generally, it is possible to change given that the items have not been used or mounted. </p></li>
-        </ul>
-    </div>
-    <br>
-    <div class="container">
-        <div class="faqs-heading">
-            <h2>What if I order the wrong item that won’t fit my car?</h2>
-        </div>
-        <ul class="paymentmethod">
-            <li><p>Prior to completing your order, you will be asked to type your car make and model. This will be reviewed when processing your order before shipment. In certain cases, we may require a photo of your car to assure that the item/s will fit. </p></li>
-        </ul>
-    </div>
-    <br>
-    <div class="container">
-        <div class="faqs-heading">
-            <h2>What is your Warranty Policy?</h2>
-        </div>
-        <ul class="paymentmethod">
-            <li><p>All products have a warranty of 180 days from the date the product was received by the customer. The warranty only covers a replacement for a defective part unless such a replacement cannot be obtained. For such cases, a full refund will be issued to the customer. For more information about our warranty, please read our Return Policy prior to check out. </p></li>
-        </ul>
-    </div>
-<br>
-<br id="aboutus">
-</section>
-<section class="backgroundmain">
-    <div class="container">
-        <div class="faqs-heading">
-            <h1>ABOUT WHEELZ ON THE SOUTH</h1>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="inputs">
+                    <div class="h5">NAME (required)</div>
+                    <input type="text" placeholder="First Name" required>
+                    <input type="text" placeholder="Last Name" required>
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>
+                    <div class="invalid-feedback">
+                        Please enter your Complete Name.
+                    </div>
+                </div><br>
+                <div class="inputs">
+                    <div class="h5">EMAIL ADDRESS (required)</div>
+                    <input type="email" placeholder="Email Address" required>
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>
+                    <div class="invalid-feedback">
+                        Please enter a Valid Email Address.
+                    </div>
+                </div><br>
+                <div class="inputs">
+                    <div class="h5">TYPE OF INQUIRY/QUESTION (required)</div>
+                    <select required>
+                        <option selected disabled value="">Type of Question/Inquiry</option>
+                        <option value="req">Request & Feedback</option>
+                        <option value="pur">Purchase-Related Inquiry</option>
+                        <option value="Ser">Service Improvements</option>
+                        <option value="oth">Other Inquiry: Please Specify in the Description</option>
+                    </select>
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>
+                    <div class="invalid-feedback">
+                        Please select concern/inquiry type.
+                    </div>
+                </div><br>
+                <div class="inputs">
+                    <div class="h5">DETAILED DESCRIPTION (required)</div>
+                    <textarea type="text" placeholder="Please elaborate your concern" rows="4" cols="50" required></textarea>
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>
+                    <div class="invalid-feedback">
+                        Please enter your Full Name.
+                    </div>
+                </div><br>
+                <button type="button" class="btn loginbtn" data-bs-toggle="modal" data-bs-target="#staticBackdrop1">
+                    &nbspSUBMIT REQUEST
+                </button>
+            </div>
         </div>
     </div>
 </section>
-<section class="backgroundmain">
-    <div class="container">
-        <div class="faqs-heading">
-            <h3>Welcome to the Wheelz on the South</h3>
-            <h5>At WheelZ On The South, we're not just about wheels; we're about a lifestyle fueled by a passion for automotive excellence. Nestled in the heart of Philippines, our team is dedicated to providing you with the ultimate experience in automotive customization and performance.</h5>
-        </div><br>
-        <div class="faqs-heading">
-            <h3>Who we are?</h3>
-            <h5>We were born out of a shared love for all things automotive. Our journey began with a simple idea – to transform ordinary rides into extraordinary expressions of individuality. As enthusiasts ourselves, we understand that your vehicle is an extension of your personality, and we're here to help you make a statement on the road.</h5>
-        </div><br>
-        <div class="faqs-heading">
-            <h3>Our Mission:</h3>
-            <h5>Our mission is to elevate your driving experience by offering a curated selection of high-quality wheels, tires, and performance upgrades. We believe in pushing boundaries, embracing innovation, and delivering unparalleled service. Whether you're seeking to enhance your vehicle's performance, style, or both, WheelZ On The South is your trusted partner in the pursuit of automotive excellence.</h5>
-        </div><br>
-        <div class="faqs-heading">
-            <h3>Why Choose WheelZ On The South?</h3>
-            <h5><b>Expertise:</b> Our team consists of automotive enthusiasts and experts who bring a wealth of knowledge to every project.</h5>
-            <h5><b>Quality:</b> We source our products from reputable brands known for their craftsmanship and durability.</h5>
-            <h5><b>Customer-Centric Approach: </b> Your satisfaction is our priority. We're committed to providing personalized solutions that exceed your expectations.
-            </h5>
-        </div><br>
-        <div class="faqs-heading">
-            <h3>Connect With Us:</h3>
-            <h5>We invite you to join the WheelZ On The South community. Follow us on social media to stay updated on the latest trends, product releases, and exciting projects. Whether you're a seasoned gearhead or just starting your automotive journey, we're here to inspire and assist you every step of the way.</h5>
-        </div><br>
-    </div>
-</section>
+<!--contactus-->
 <!--main page-->
 <script>
     (() => {
