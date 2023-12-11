@@ -428,7 +428,7 @@ body{
 }
 
 .productswheels-heading{
-    letter-spacing: 3px;
+    letter-spacing: 0;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -436,7 +436,8 @@ body{
 }
 
 .productswheels-heading h1{
-    font-size: 4.5rem;
+    font-size: 2.5rem;
+    font-family: 'poppins';
 }
 
 .reviews-heading{
@@ -796,4 +797,69 @@ input[type='file']{
     font-size: 60px;
     line-height: 1.5em;
     font-weight: 600;
+    color: white;
 }
+
+.hero{
+    height: 100vh;
+}
+
+.contactusform{
+    width: 90%;
+    max-width: 600px;
+}
+
+.input-group{
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.contactforminput {
+    width: 100%;
+    padding: 10px;
+    outline: 0;
+    border: 1px solid #fff;
+    color: black;
+    font-size: 15px;
+    
+}
+
+.contactformlabel{
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding: 15px;
+    color: black;
+    cursor: text;
+    transition: 0.2s;
+}
+
+.contactformbutton {
+    padding: 10px 0;
+    color: rgb(0, 0, 0);
+    outline: none;
+    border: 1px solid #fff;
+    width: 100%;
+    cursor: pointer;
+    background-color: rgb(255, 200, 0);
+    border-radius: 20px;
+}
+
+.contactforminput:focus~.contactformlabel,
+.contactforminput:valid~.contactformlabel{
+    top: -35px;
+    font-size: 14px;
+    color: white;
+}
+
+.namerow{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.namerow .input-group{
+    flex-basis: 50%;
+}
+
